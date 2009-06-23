@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="net.bioclipse.metware_feature"
+      label="Metware Feature"
+      version="2.0.0.B20090506"
+      provider-name="Bioclipse Team"
+      plugin="net.bioclipse.metware">
+
+   <description>
+      Metware support for Bioclipse.
+   </description>
+
+   <copyright>
+      Copyright (c)  2009  Egon Willighagen
+
+All rights reserved.
+   </copyright>
+
+   <license url="http://www.eclipse.org/legal/epl-v10.html ">
+      This program and the accompanying materials are made available
+under the terms of the Eclipse Public License v1.0 + exception,
+putting no constraints on choice of backend and/or license for
+creating plugins for Bioclipse; it is totally open for both open
+source plugins as well as commercial. The exception allows GPL
+plugins to be written and run in any combination with EPL licensed
+plugins, addressing incompatibility between the EPL and the GPL
+v.2.
+The Eclipse Public License accompanies this distribution, and
+is available at http://www.eclipse.org/legal/epl-v10.html
+   </license>
+
+   <plugin
+         id="net.bioclipse.metware"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.metware"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
