@@ -12,5 +12,13 @@
       <initializer
          class="net.bioclipse.metware.preferences.MetWarePreferenceInitializer"/>
    </extension>
-   
+
+   <extension
+         point="net.bioclipse.scripting.contribution">
+      <scriptContribution
+            id="net.bioclipse.metware.MetwareManager"
+            service="net.bioclipse.metware.business.MetwareManagerFactory">
+      </scriptContribution>
+   </extension>
+
 </plugin>
