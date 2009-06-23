@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Metware
+Bundle-SymbolicName: org.metware
+Bundle-Version: 0.6.0
+Bundle-ClassPath: metware.jar,
+ jars/metware-bigmet.jar
+Export-Package: net.sf.metware.codegenerator,
+ net.sf.metware.codegenerator.io.skos,
+ net.sf.metware.datatypes,
+ net.sf.metware.datatypes.xsd.io,
+ net.sf.metware.sql.design,
+ resources
+Bundle-Vendor: http://www.metware.org/
