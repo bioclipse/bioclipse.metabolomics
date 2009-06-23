@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension point="org.eclipse.ui.preferencePages">
+      <page
+         class="net.bioclipse.metware.preferences.MetWarePreferencePage"
+	     id="net.bioclipse.metware.preferences.MetWarePreferencePage"
+	     name="MetWare Preferences" />
+   </extension>
+   <extension point="org.eclipse.core.runtime.preferences">
+      <initializer
+         class="net.bioclipse.metware.preferences.MetWarePreferenceInitializer"/>
+   </extension>
+   
+</plugin>
