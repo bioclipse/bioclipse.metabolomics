@@ -12,6 +12,5 @@ Require-Bundle: org.eclipse.ui,
  org.springframework.bundle.spring.aop,
  net.sf.cglib,
  org.springframework.osgi.aopalliance.osgi
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: org.apache.log4j
 Bundle-ActivationPolicy: lazy
