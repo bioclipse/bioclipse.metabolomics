@@ -10,12 +10,19 @@
  ******************************************************************************/
 package net.bioclipse.metfrag.business;
 
+import org.eclipse.core.runtime.IProgressMonitor;
+
 import net.bioclipse.core.PublishedClass;
+import net.bioclipse.core.PublishedMethod;
+import net.bioclipse.core.business.BioclipseException;
+import net.bioclipse.jobs.IReturner;
 import net.bioclipse.managers.business.IBioclipseManager;
 
 @PublishedClass(
-    value="TODO: Describe the manager here."
+    value="The MetFrag manager is the interface to the in-silico Fragmentation tool."
 )
 public interface IMetfragManager extends IBioclipseManager {
-
+	@PublishedMethod(params = "", 
+	                 methodSummary = "Runs a pre-canned query against KEGG :-)")
+	public void calculateMetFragScore() throws BioclipseException;
 }
