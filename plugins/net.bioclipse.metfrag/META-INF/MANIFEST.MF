@@ -11,6 +11,13 @@ Require-Bundle: org.eclipse.ui,
  net.bioclipse.scripting,
  org.springframework.bundle.spring.aop,
  net.sf.cglib,
- org.springframework.osgi.aopalliance.osgi
-Import-Package: org.apache.log4j
+ org.springframework.osgi.aopalliance.osgi,
+ org.openscience.cdk.interfaces,
+ org.openscience.cdk.standard,
+ de.ipbhalle.metfrag;bundle-version="0.0.1"
+Import-Package: org.apache.log4j,
+ org.openscience.cdk,
+ org.openscience.cdk.io,
+ org.openscience.cdk.tools,
+ org.openscience.cdk.tools.manipulator
 Bundle-ActivationPolicy: lazy
