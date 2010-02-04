@@ -19,8 +19,13 @@ import java.util.Vector;
 
 import net.bioclipse.core.business.BioclipseException;
 import net.bioclipse.core.domain.IMolecule;
+import net.bioclipse.core.domain.ISpectrum;
 import net.bioclipse.jobs.IReturner;
 import net.bioclipse.managers.business.IBioclipseManager;
+
+import net.bioclipse.core.domain.ISpectrum;
+import net.bioclipse.spectrum.domain.IJumboSpectrum;
+import net.bioclipse.spectrum.domain.JumboSpectrum;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -69,15 +74,19 @@ public class MetfragManager implements IBioclipseManager {
         return "metfrag";
     }
 
-	public void calculateMetFragScore()
+	public List<Double> calculateMetFragScore()
 			throws BioclipseException {
-		List<Float> result = new ArrayList<Float>();
+		
+		List<Double> result = new ArrayList<Double>();
 		// Do calculation
 
 		//example values
+		ISpectrum spectrum = new JumboSpectrum();		
+		
 		String peaks = "119.051 467.616 45\n123.044 370.662 36\n" +
 		"147.044 6078.145 606\n153.019 10000.0 999\n179.036 141.192 13\n189.058 176.358 16\n" +
 		"273.076 10000.000 999\n274.083 318.003 30\n";
+		
 		String smiles = "C1C(OC2=CC(=CC(=C2C1=O)O)O)C3=CC=C(C=C3)O";
 		IAtomContainer molecule = DefaultChemObjectBuilder.getInstance().newAtomContainer();
 
@@ -105,15 +114,15 @@ public class MetfragManager implements IBioclipseManager {
         		
 //      MetFlowConvenience mfc = new MetFlowConvenience(0.01, 50.0, 10.0, peaks, "kegg", true, "", 50, 1, 272.06847);
 //      System.out.println(mfc.metFrag());
-		
+
 		try {
 			BioClipseConvenience bcc = new BioClipseConvenience(0.01, 50.0, peaks, molecules, true, "", 1, 272.06847);
-            System.out.println(bcc.metFrag());
-			
+			logger.info("And the score is...");
+			result = bcc.metFrag();		
 		} catch (Exception e) {
 			System.out.println("Error! TODO...");
 			e.printStackTrace();
 		}
-		
+		return result;		
      }
 }

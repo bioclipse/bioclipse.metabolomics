@@ -10,6 +10,8 @@
  ******************************************************************************/
 package net.bioclipse.metfrag.business;
 
+import java.util.List;
+
 import org.eclipse.core.runtime.IProgressMonitor;
 
 import net.bioclipse.core.PublishedClass;
@@ -24,5 +26,5 @@ import net.bioclipse.managers.business.IBioclipseManager;
 public interface IMetfragManager extends IBioclipseManager {
 	@PublishedMethod(params = "", 
 	                 methodSummary = "Runs a pre-canned query against KEGG :-)")
-	public void calculateMetFragScore() throws BioclipseException;
+	public List<Double> calculateMetFragScore() throws BioclipseException;
 }
