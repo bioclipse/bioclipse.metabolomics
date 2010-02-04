@@ -47,6 +47,7 @@
    <vm>
    </vm>
 
+
    <plugins>
       <plugin id="com.ibm.icu"/>
       <plugin id="jcl104.over.slf4j"/>
@@ -140,7 +141,7 @@
 
    <features>
       <feature id="net.bioclipse.platform_feature" version="2.2.0.RC3"/>
-      <feature id="net.bioclipse.metfrag_feature" version="2.0.0.B20090506"/>
+      <feature id="net.bioclipse.metfrag_feature" version="2.0.0.B20100203"/>
    </features>
 
 
