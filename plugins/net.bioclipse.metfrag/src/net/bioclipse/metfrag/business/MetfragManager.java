@@ -26,6 +26,8 @@ import net.bioclipse.managers.business.IBioclipseManager;
 import net.bioclipse.core.domain.ISpectrum;
 import net.bioclipse.spectrum.domain.IJumboSpectrum;
 import net.bioclipse.spectrum.domain.JumboSpectrum;
+import net.bioclipse.spectrum.business.SpectrumManager;
+import net.bioclipse.spectrum.business.SpectrumManagerFactory;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -80,8 +82,14 @@ public class MetfragManager implements IBioclipseManager {
 		List<Double> result = new ArrayList<Double>();
 		// Do calculation
 
-		//example values
-		ISpectrum spectrum = new JumboSpectrum();		
+		// Later move ISpectrum spectrum into parameters
+		ISpectrum spectrum = null;
+		
+		SpectrumManager sm = new SpectrumManager();
+		IJumboSpectrum jspectrum = sm.create(spectrum);
+
+		// ... and extract peaks:
+		// jspectrum.getPeakListElements().get(0).getPeakElements().get(x).xValue()
 		
 		String peaks = "119.051 467.616 45\n123.044 370.662 36\n" +
 		"147.044 6078.145 606\n153.019 10000.0 999\n179.036 141.192 13\n189.058 176.358 16\n" +
