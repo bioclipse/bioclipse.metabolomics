@@ -87,6 +87,7 @@ public class BioClipseConvenience {
 	{
 		this.mzabs = mzabs;
 		this.mzppm = mzppm;
+		this.spectrum = spectrum;
 		this.peaks = spectrum.getPeaks();
 		this.molecules = molecules;
 		this.sumFormulaRedundancyCheck = sumFormulaRedundancyCheck;
@@ -249,7 +250,7 @@ public class BioClipseConvenience {
 		HashMap<Double, Vector<String>> scoresNormalized = normalize(realScoreMap);
 		Double[] scores = new Double[scoresNormalized.size()];
 		scores = scoresNormalized.keySet().toArray(scores);
-		//		Arrays.sort(scores);
+
 		List<Double> result;
 		result = Arrays.asList(scores);		
 		return result;

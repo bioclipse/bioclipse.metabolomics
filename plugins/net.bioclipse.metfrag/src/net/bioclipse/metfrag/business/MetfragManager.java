@@ -80,26 +80,29 @@ public class MetfragManager implements IBioclipseManager {
 		CMLSpectrum cspectrum = jspectrum.getJumboObject();
 
 		Vector<Peak> mfpeaks = new Vector<Peak>();
+		logger.info("Adding peaks ... ");
 		for (CMLPeak peak : cspectrum.getPeakListElements().getList().get(0).getPeakElements()) {
+			logger.info("Adding " + peak.getXValue() + " " +  peak.getYValue());
 			mfpeaks.add(new Peak(peak.getXValue(), peak.getYValue(), -1)); 
 		}
-		
-
-		
+		logger.info("Adding peaks done");
+				
 		Spectrum mfspectrum = new Spectrum(-1 /*CE eV */ , 
 											mfpeaks, 
-											0.0 /* mass */ , 1 /*mode*/,  
+											272.06847 /* mass */ , 1 /*mode*/,  
 											"" /* inchi */ , 0 /*CID*/ , 
-											"" /* KEGG */ , "" /* Name */, "" /*formula*/  );
+											"" /* KEGG */ , "" /* Name */, "C15H12O5" /*formula*/  );
 		
 
 		try {
 			BioClipseConvenience bcc = new BioClipseConvenience(mzabs, mzppm, mfspectrum, molecules, true, "", 1, 272.06847);
 			logger.info("And the score is...");
-			result = bcc.metFrag();		
+			List<Double> mfresult = bcc.metFrag();
+			logger.info("We got " + mfresult.size() + "results.");			
+			result.addAll(mfresult);		
 		} catch (Exception e) {
-			System.out.println("Error! TODO...");
 			e.printStackTrace();
+			result.add(-1.0);
 		}
 		return result;
 		
