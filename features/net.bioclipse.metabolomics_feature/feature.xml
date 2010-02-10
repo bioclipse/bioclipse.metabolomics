@@ -29,4 +29,19 @@ The Eclipse Public License accompanies this distribution, and
 is available at http://www.eclipse.org/legal/epl-v10.html
    </license>
 
+   <includes
+         id="net.bioclipse.metfrag_feature"
+         version="0.0.0"/>
+
+   <includes
+         id="net.bioclipse.metware_feature"
+         version="0.0.0"/>
+
+   <plugin
+         id="net.bioclipse.data.metabolomics"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>
