@@ -6,13 +6,12 @@
       provider-name="Bioclipse Team"
       plugin="net.bioclipse.metfrag">
 
-   <description>
+   <description url="http://msbi.ipb-halle.de/MetFrag/">
       MetFrag for Bioclipse.
    </description>
 
    <copyright>
       Copyright (c) 2010  Foo Bar
-
 All rights reserved.
    </copyright>
 
@@ -28,6 +27,10 @@ v.2.
 The Eclipse Public License accompanies this distribution, and
 is available at http://www.eclipse.org/legal/epl-v10.html
    </license>
+
+   <url>
+      <discovery label="MetFrag homepage" url="http://msbi.ipb-halle.de/MetFrag/"/>
+   </url>
 
    <requires>
       <import plugin="org.eclipse.ui"/>
