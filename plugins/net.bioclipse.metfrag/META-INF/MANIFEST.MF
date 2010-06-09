@@ -15,7 +15,6 @@ Require-Bundle: org.eclipse.core.runtime,
  net.bioclipse.core,
  net.bioclipse.scripting,
  net.bioclipse.spectrum,
- net.bioclipse.xom,
  net.sf.cglib,
  org.openscience.cdk.atomtype,
  org.openscience.cdk.charges,
@@ -24,7 +23,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.openscience.cdk.extra,
  org.openscience.cdk.fingerprint,
  org.openscience.cdk.formula,
- org.openscience.cdk.inchi,
+ org.openscience.cdk.sinchi,
  org.openscience.cdk.interfaces,
  org.openscience.cdk.io,
  org.openscience.cdk.ioformats,
@@ -32,8 +31,10 @@ Require-Bundle: org.eclipse.core.runtime,
  org.openscience.cdk.libiocml,
  org.openscience.cdk.pcore,
  org.openscience.cdk.smiles,
- org.openscience.cdk.standard,
- org.xmlcml.cmlxom
+ org.openscience.cdk.standard
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
-Import-Package: org.apache.log4j
+Import-Package: nu.xom;version="1.1.0",
+ org.apache.log4j,
+ org.xmlcml.cml.base,
+ org.xmlcml.cml.element
