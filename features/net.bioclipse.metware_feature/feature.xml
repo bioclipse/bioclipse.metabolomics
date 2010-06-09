@@ -2,7 +2,7 @@
 <feature
       id="net.bioclipse.metware_feature"
       label="Metware Feature"
-      version="2.0.0.B20090506"
+      version="2.4.0.RC1"
       provider-name="Bioclipse Team"
       plugin="net.bioclipse.metware">
 

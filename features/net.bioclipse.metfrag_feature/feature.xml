@@ -2,7 +2,7 @@
 <feature
       id="net.bioclipse.metfrag_feature"
       label="MetFrag Feature"
-      version="2.0.0.B20100203"
+      version="2.4.0.RC1"
       provider-name="Bioclipse Team"
       plugin="net.bioclipse.metfrag">
 
@@ -69,6 +69,13 @@ is available at http://www.eclipse.org/legal/epl-v10.html
 
    <plugin
          id="de.ipbhalle.metfrag"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.bioclipse.spectrum"
          download-size="0"
          install-size="0"
          version="0.0.0"
