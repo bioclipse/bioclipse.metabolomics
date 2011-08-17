@@ -18,13 +18,13 @@
    </license>
 
    <includes
-         id="net.bioclipse.opentox_feature"
+         id="net.bioclipse.metabolomics_feature"
          version="0.0.0"/>
-
-   <requires>
-      <import feature="net.bioclipse.metware_feature" version="2.4.0.20100709"/>
-      <import feature="net.bioclipse.metabolomics_feature" version="2.4.1.20110201"/>
-      <import feature="net.bioclipse.metafrag_feature" version="2.4.1.20110201"/>
-   </requires>
+   <includes
+         id="net.bioclipse.metware_feature"
+         version="0.0.0"/>
+   <includes
+         id="net.bioclipse.metafrag_feature"
+         version="0.0.0"/>
 
 </feature>
