@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="net.bioclipse.metabolomics_site"
+      label="Bioclipse-Metabolomics Update Site"
+      version="2.5.0.qualifier"
+      provider-name="The Bioclipse Team">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <includes
+         id="net.bioclipse.opentox_feature"
+         version="0.0.0"/>
+
+   <requires>
+      <import feature="net.bioclipse.metware_feature" version="2.4.0.20100709"/>
+      <import feature="net.bioclipse.metabolomics_feature" version="2.4.1.20110201"/>
+      <import feature="net.bioclipse.metafrag_feature" version="2.4.1.20110201"/>
+   </requires>
+
+</feature>
