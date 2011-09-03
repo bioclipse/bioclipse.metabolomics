@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Metfrag
 Bundle-SymbolicName: net.bioclipse.metfrag; singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 2.5.0.qualifier
 Bundle-Activator: net.bioclipse.metfrag.Activator
 Export-Package: net.bioclipse.metfrag, net.bioclipse.metfrag.business
 Require-Bundle: org.eclipse.core.runtime,
@@ -23,7 +23,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.openscience.cdk.extra,
  org.openscience.cdk.fingerprint,
  org.openscience.cdk.formula,
- org.openscience.cdk.sinchi,
+ org.openscience.cdk.inchi,
  org.openscience.cdk.interfaces,
  org.openscience.cdk.io,
  org.openscience.cdk.ioformats,

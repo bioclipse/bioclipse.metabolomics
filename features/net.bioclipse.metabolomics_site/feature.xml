@@ -20,11 +20,5 @@
    <includes
          id="net.bioclipse.metabolomics_feature"
          version="0.0.0"/>
-   <includes
-         id="net.bioclipse.metware_feature"
-         version="0.0.0"/>
-   <includes
-         id="net.bioclipse.metafrag_feature"
-         version="0.0.0"/>
 
 </feature>

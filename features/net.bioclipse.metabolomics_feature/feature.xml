@@ -2,7 +2,7 @@
 <feature
       id="net.bioclipse.metabolomics_feature"
       label="Metabolomics Feature"
-      version="2.4.0.RC1"
+      version="2.5.0.qualifier"
       provider-name="Bioclipse Team"
       plugin="net.bioclipse.core">
 

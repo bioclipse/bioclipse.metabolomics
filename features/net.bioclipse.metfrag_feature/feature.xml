@@ -2,7 +2,7 @@
 <feature
       id="net.bioclipse.metfrag_feature"
       label="MetFrag Feature"
-      version="2.4.0.RC1"
+      version="2.5.0.qualifier"
       provider-name="Bioclipse Team"
       plugin="net.bioclipse.metfrag">
 
@@ -33,31 +33,8 @@ is available at http://www.eclipse.org/legal/epl-v10.html
    </url>
 
    <requires>
-      <import plugin="org.eclipse.ui"/>
-      <import plugin="org.eclipse.core.runtime"/>
-      <import plugin="net.bioclipse.core"/>
-      <import plugin="net.bioclipse.scripting"/>
-      <import plugin="org.springframework.bundle.spring.aop"/>
-      <import plugin="net.sf.cglib"/>
-      <import plugin="org.springframework.osgi.aopalliance.osgi"/>
-      <import plugin="org.openscience.cdk.interfaces"/>
-      <import plugin="org.openscience.cdk.standard"/>
-      <import plugin="de.ipbhalle.metfrag" version="0.0.1" match="greaterOrEqual"/>
-      <import plugin="org.apache.log4j"/>
-      <import plugin="org.openscience.cdk.extra"/>
-      <import plugin="org.openscience.cdk.reaction"/>
-      <import plugin="org.openscience.cdk.formula"/>
-      <import plugin="org.openscience.cdk.data"/>
-      <import plugin="org.openscience.cdk.core"/>
-      <import plugin="org.openscience.cdk.io"/>
-      <import plugin="org.openscience.cdk.ioformats"/>
-      <import plugin="org.openscience.cdk.atomtype"/>
-      <import plugin="org.openscience.cdk.smiles"/>
-      <import plugin="org.openscience.cdk.charges"/>
-      <import plugin="org.openscience.cdk.inchi"/>
-      <import plugin="org.openscience.cdk.fingerprint"/>
-      <import plugin="org.openscience.cdk.isomorphism"/>
-      <import plugin="javax.vecmath"/>
+      <import feature="net.bioclipse.chemoinformatics_feature" version="2.5.0.qualifier"/>
+      <import feature="net.bioclipse.speclipse_feature" version="2.5.0.qualifier"/>
    </requires>
 
    <plugin
@@ -69,13 +46,6 @@ is available at http://www.eclipse.org/legal/epl-v10.html
 
    <plugin
          id="de.ipbhalle.metfrag"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="net.bioclipse.spectrum"
          download-size="0"
          install-size="0"
          version="0.0.0"

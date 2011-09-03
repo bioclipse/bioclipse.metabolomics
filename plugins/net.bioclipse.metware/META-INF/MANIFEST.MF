@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Metware
 Bundle-SymbolicName: net.bioclipse.metware;singleton:=true
-Bundle-Version: 2.0.0
+Bundle-Version: 2.5.0.qualifier
 Bundle-ClassPath: metware.jar,
  jars/metware-bigmet.jar
 Require-Bundle: org.metware;bundle-version="0.6.0",
