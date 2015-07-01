@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MSDK
+Bundle-SymbolicName: net.bioclipse.msdk;singleton:=true
+Bundle-Version: 2.6.2.qualifier
+Bundle-Activator: net.bioclipse.msdk.Activator
+Bundle-Vendor: Egon Willighagen
+Export-Package: net.bioclipse.msdk, net.bioclipse.msdk.business
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ net.bioclipse.core,
+ net.bioclipse.scripting,
+ org.springframework.bundle.spring.aop,
+ net.sf.cglib,
+ org.springframework.osgi.aopalliance.osgi
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.apache.log4j
+Bundle-ActivationPolicy: lazy

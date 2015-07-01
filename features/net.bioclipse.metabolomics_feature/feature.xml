@@ -2,7 +2,7 @@
 <feature
       id="net.bioclipse.metabolomics_feature"
       label="Metabolomics Feature"
-      version="2.5.0.qualifier"
+      version="2.6.2.qualifier"
       provider-name="Bioclipse Team"
       plugin="net.bioclipse.core">
 
@@ -39,6 +39,13 @@ is available at http://www.eclipse.org/legal/epl-v10.html
 
    <plugin
          id="net.bioclipse.data.metabolomics"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.bioclipse.msdk"
          download-size="0"
          install-size="0"
          version="0.0.0"
