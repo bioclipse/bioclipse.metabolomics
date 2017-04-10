@@ -25,4 +25,8 @@
          id="net.bioclipse.splash_feature"
          version="0.0.0"/>
 
+   <includes
+         id="net.bioclipse.mom_feature"
+         version="0.0.0"/>
+
 </feature>
