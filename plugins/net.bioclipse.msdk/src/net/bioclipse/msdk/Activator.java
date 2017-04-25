@@ -14,17 +14,18 @@ import net.bioclipse.msdk.business.IMsdkManager;
 import net.bioclipse.msdk.business.IJavaMsdkManager;
 import net.bioclipse.msdk.business.IJavaScriptMsdkManager;
 
-import org.apache.log4j.Logger;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 import org.osgi.util.tracker.ServiceTracker;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * The Activator class controls the plug-in life cycle
  */
 public class Activator extends AbstractUIPlugin {
 
-    private static final Logger logger = Logger.getLogger(Activator.class);
+    private static final Logger logger = LoggerFactory.getLogger(Activator.class);
 
     // The shared instance
     private static Activator plugin;

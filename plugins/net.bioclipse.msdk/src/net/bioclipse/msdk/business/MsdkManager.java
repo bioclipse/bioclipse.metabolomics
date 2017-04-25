@@ -10,13 +10,15 @@
  ******************************************************************************/
 package net.bioclipse.msdk.business;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import net.bioclipse.managers.business.IBioclipseManager;
 
-import org.apache.log4j.Logger;
 
 public class MsdkManager implements IBioclipseManager {
 
-    private static final Logger logger = Logger.getLogger(MsdkManager.class);
+    private static final Logger logger = LoggerFactory.getLogger(MsdkManager.class);
 
     /**
      * Gives a short one word name of the manager used as variable name when
