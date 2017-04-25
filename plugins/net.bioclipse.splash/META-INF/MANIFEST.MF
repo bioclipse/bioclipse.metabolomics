@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Splash
 Bundle-SymbolicName: net.bioclipse.splash;singleton:=true
-Bundle-Version: 2.6.2.qualifier
+Bundle-Version: 2.7.0.qualifier
 Bundle-Activator: net.bioclipse.splash.Activator
 Bundle-Vendor: Egon Willighagen
 Export-Package: net.bioclipse.splash, net.bioclipse.splash.business
