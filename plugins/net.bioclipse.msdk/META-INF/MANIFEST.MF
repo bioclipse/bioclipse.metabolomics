@@ -6,13 +6,12 @@ Bundle-Version: 2.7.0.qualifier
 Bundle-Activator: net.bioclipse.msdk.Activator
 Bundle-Vendor: Egon Willighagen
 Export-Package: net.bioclipse.msdk, net.bioclipse.msdk.business
-Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime,
- net.bioclipse.core,
- net.bioclipse.scripting,
- org.springframework.bundle.spring.aop,
- net.sf.cglib,
- org.springframework.osgi.aopalliance.osgi
-Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: net.bioclipse.core,
+ net.bioclipse.core.business,
+ net.bioclipse.managers.business,
+ org.eclipse.core.runtime;version="3.5.0",
+ org.osgi.framework;version="1.8.0",
+ org.osgi.util.tracker;version="1.5.1",
+ org.slf4j;version="1.7.21"
 Bundle-ActivationPolicy: lazy

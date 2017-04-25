@@ -14,7 +14,6 @@ import net.bioclipse.msdk.business.IMsdkManager;
 import net.bioclipse.msdk.business.IJavaMsdkManager;
 import net.bioclipse.msdk.business.IJavaScriptMsdkManager;
 
-import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 import org.osgi.util.tracker.ServiceTracker;
 import org.slf4j.Logger;
@@ -23,7 +22,7 @@ import org.slf4j.LoggerFactory;
 /**
  * The Activator class controls the plug-in life cycle
  */
-public class Activator extends AbstractUIPlugin {
+public class Activator {
 
     private static final Logger logger = LoggerFactory.getLogger(Activator.class);
 
@@ -37,8 +36,7 @@ public class Activator extends AbstractUIPlugin {
     public Activator() {
     }
 
-    public void start(BundleContext context) throws Exception {
-        super.start(context);
+    public void start(BundleContext context){
         plugin = this;
         javaFinderTracker
             = new ServiceTracker( context,
@@ -54,9 +52,8 @@ public class Activator extends AbstractUIPlugin {
         jsFinderTracker.open();
     }
 
-    public void stop(BundleContext context) throws Exception {
+    public void stop(BundleContext context) {
         plugin = null;
-        super.stop(context);
     }
 
     /**
