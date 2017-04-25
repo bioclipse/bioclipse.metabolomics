@@ -18,6 +18,7 @@ import net.bioclipse.core.business.BioclipseException;
 import net.bioclipse.core.domain.IMolecule;
 import net.bioclipse.core.domain.ISpectrum;
 import net.bioclipse.managers.business.IBioclipseManager;
+import net.bioclipse.spectrum.business.ISpectrumManager;
 import net.bioclipse.spectrum.business.SpectrumManager;
 import net.bioclipse.spectrum.domain.JumboSpectrum;
 
@@ -75,7 +76,7 @@ public class MetfragManager implements IBioclipseManager {
 		"147.044 6078.145 606\n153.019 10000.0 999\n179.036 141.192 13\n189.058 176.358 16\n" +
 		"273.076 10000.000 999\n274.083 318.003 30\n";
 
-		SpectrumManager sm = new SpectrumManager(); 
+		ISpectrumManager sm = (ISpectrumManager) new SpectrumManager(); 
 		JumboSpectrum jspectrum = (JumboSpectrum) sm.create(spectrum);
 		CMLSpectrum cspectrum = jspectrum.getJumboObject();
 
