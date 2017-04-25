@@ -14,8 +14,8 @@ Require-Bundle: org.eclipse.ui,
  org.springframework.bundle.spring.aop,
  net.sf.cglib,
  org.springframework.osgi.aopalliance.osgi,
- org.junit4,
- net.bioclipse.metfrag
+ net.bioclipse.metfrag,
+ org.junit;bundle-version="4.12.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: org.apache.log4j
 Bundle-ActivationPolicy: lazy
