@@ -15,14 +15,13 @@ import net.bioclipse.mom.business.IJavaMomManager;
 import net.bioclipse.mom.business.IJavaScriptMomManager;
 
 import org.apache.log4j.Logger;
-import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 import org.osgi.util.tracker.ServiceTracker;
 
 /**
  * The Activator class controls the plug-in life cycle
  */
-public class Activator extends AbstractUIPlugin {
+public class Activator {
 
     private static final Logger logger = Logger.getLogger(Activator.class);
 
@@ -37,7 +36,6 @@ public class Activator extends AbstractUIPlugin {
     }
 
     public void start(BundleContext context) throws Exception {
-        super.start(context);
         plugin = this;
         javaFinderTracker
             = new ServiceTracker( context,
@@ -55,7 +53,6 @@ public class Activator extends AbstractUIPlugin {
 
     public void stop(BundleContext context) throws Exception {
         plugin = null;
-        super.stop(context);
     }
 
     /**
