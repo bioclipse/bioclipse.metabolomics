@@ -1,5 +1,4 @@
-/*******************************************************************************
- * Copyright (c) 2016  Egon Willighagen <egon.willighagen@gmail.com>
+/* Copyright (c) 2016-2017  Egon Willighagen <egon.willighagen@gmail.com>
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -7,21 +6,22 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contact: http://www.bioclipse.net/
- ******************************************************************************/
+ */
 package net.bioclipse.mom;
 
-import net.bioclipse.mom.business.IMomManager;
-import net.bioclipse.mom.business.IJavaMomManager;
-import net.bioclipse.mom.business.IJavaScriptMomManager;
-
 import org.apache.log4j.Logger;
+import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 import org.osgi.util.tracker.ServiceTracker;
+
+import net.bioclipse.mom.business.IJavaMomManager;
+import net.bioclipse.mom.business.IJavaScriptMomManager;
+import net.bioclipse.mom.business.IMomManager;
 
 /**
  * The Activator class controls the plug-in life cycle
  */
-public class Activator {
+public class Activator extends AbstractUIPlugin {
 
     private static final Logger logger = Logger.getLogger(Activator.class);
 

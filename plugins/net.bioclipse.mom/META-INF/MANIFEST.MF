@@ -14,7 +14,8 @@ Require-Bundle: org.eclipse.core.resources,
  org.springframework.bundle.spring.aop,
  net.sf.cglib,
  org.springframework.osgi.aopalliance.osgi,
- org.eclipse.core.runtime;bundle-version="3.11.1"
+ org.eclipse.core.runtime,
+ org.eclipse.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Import-Package: org.apache.log4j,
  org.osgi.framework;version="1.8.0",
