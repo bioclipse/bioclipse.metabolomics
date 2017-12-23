@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ambit-SMIRKS
+Bundle-SymbolicName: net.bioclipse.ambit.smirks;singleton:=true
+Bundle-Version: 2.6.2.qualifier
+Bundle-Activator: net.bioclipse.ambit.smirks.Activator
+Bundle-Vendor: Egon Willighagen
+Export-Package: net.bioclipse.ambit.smirks,
+ net.bioclipse.ambit.smirks.business
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ net.bioclipse.core,
+ net.bioclipse.scripting,
+ org.springframework.bundle.spring.aop,
+ net.sf.cglib,
+ org.springframework.osgi.aopalliance.osgi,
+ net.bioclipse.cdk.business,
+ org.eclipse.core.resources
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: org.apache.log4j
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: libs/AmbitSmirksGUI-1.02b.jar,
+ .

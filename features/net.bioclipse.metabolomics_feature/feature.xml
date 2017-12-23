@@ -45,7 +45,7 @@ is available at http://www.eclipse.org/legal/epl-v10.html
          unpack="false"/>
 
    <plugin
-         id="net.bioclipse.msdk"
+         id="net.bioclipse.ambit.smirks"
          download-size="0"
          install-size="0"
          version="0.0.0"
