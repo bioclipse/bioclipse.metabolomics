@@ -11,7 +11,9 @@
 package net.bioclipse.ambit.smirks.business;
 
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -39,11 +41,14 @@ import net.bioclipse.cdk.business.ICDKManager;
 import net.bioclipse.cdk.domain.ICDKMolecule;
 import net.bioclipse.core.business.BioclipseException;
 import net.bioclipse.core.domain.IMolecule;
+import net.bioclipse.inchi.InChI;
+import net.bioclipse.inchi.business.IInChIManager;
 import net.bioclipse.managers.business.IBioclipseManager;
 
 public class SmirksManager implements IBioclipseManager {
 
 	private final ICDKManager   cdk    = Activator.getDefault().getJavaCDKManager();
+	private final IInChIManager   inchi  = net.bioclipse.inchi.business.Activator.getDefault().getJavaInChIManager();
 	private final SMIRKSManager smrkMan = new SMIRKSManager(
 		SilentChemObjectBuilder.getInstance()
 	);
@@ -107,12 +112,20 @@ public class SmirksManager implements IBioclipseManager {
         		cdkMol, null, reaction, SmartsConst.SSM_MODE.SSM_NON_IDENTICAL
         	);
         	if (rproducts != null) {
+                Set<String> keys = new HashSet<>();
         		for (int i = 0; i < rproducts.getAtomContainerCount(); i++) {
         			IAtomContainer mol = rproducts.getAtomContainer(i);
         			AtomContainerManipulator.suppressHydrogens(mol);
 					String newSmiles = SmilesGenerator.absolute().create(mol);
         			System.out.println("New SMILES: " + newSmiles);
-        			mols.add(cdk.fromSMILES(newSmiles));
+
+                    ICDKMolecule cdkMolNew = cdk.fromSMILES(newSmiles);
+					InChI inchiObj = inchi.generate(cdkMolNew);
+					String inchikey = inchiObj.getKey();
+					if (!keys.contains(inchikey)) {
+						mols.add(cdkMolNew);
+						keys.add(inchikey);
+					}
         		}
         	} else {
         		logger.warn("No products generated...");
