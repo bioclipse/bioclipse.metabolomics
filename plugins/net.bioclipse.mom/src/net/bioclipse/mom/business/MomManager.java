@@ -32,17 +32,19 @@ public class MomManager implements IBioclipseManager {
     private static IDMapper chargeMapper;
     private static IDMapper rolesMapper;
     private static IDMapper tautomerMapper;
+    private static IDMapper enantiomerMapper;
     private static BridgedbManager bridgedb = new BridgedbManager();
     
     static {
     	try {
 			Class.forName("org.bridgedb.mapper.chebi.ChEBIIDMapper");
 			DataSourceTxt.init();
-			MomManager.allMapper = BridgeDb.connect("idmapper-chebi:matchSuperClass,matchChargeStates,matchRoles,matchTautomers");
+			MomManager.allMapper = BridgeDb.connect("idmapper-chebi:matchSuperClass,matchChargeStates,matchRoles,matchTautomers,matchEnantiomers");
 			MomManager.superMapper = BridgeDb.connect("idmapper-chebi:matchSuperClass");
 			MomManager.chargeMapper = BridgeDb.connect("idmapper-chebi:matchChargeStates");
 			MomManager.rolesMapper = BridgeDb.connect("idmapper-chebi:matchRoles");
 			MomManager.tautomerMapper = BridgeDb.connect("idmapper-chebi:matchTautomers");
+			MomManager.enantiomerMapper = BridgeDb.connect("idmapper-chebi:matchEnantiomers");
 		} catch (Exception e) {
 			logger.error("Could not set up the ontology mapper: " + e.getMessage());
 		}
@@ -104,5 +106,15 @@ public class MomManager implements IBioclipseManager {
     	if (!source.getDataSource().getSystemCode().equals("Ce"))
     		throw new BioclipseException("Xref must be from ChEBI");
     	return bridgedb.map(tautomerMapper, source);
+    }
+
+    public List<String> mapEnantiomers(String identifier) throws BioclipseException {
+    	return bridgedb.map(enantiomerMapper, identifier, "Ce");
+    }
+
+    public Set<Xref> mapEnantiomers(Xref source) throws BioclipseException {
+    	if (!source.getDataSource().getSystemCode().equals("Ce"))
+    		throw new BioclipseException("Xref must be from ChEBI");
+    	return bridgedb.map(enantiomerMapper, source);
     }
 }

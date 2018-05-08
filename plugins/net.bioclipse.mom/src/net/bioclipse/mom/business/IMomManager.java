@@ -106,5 +106,20 @@ public interface IMomManager extends IBioclipseManager {
     )
     public Set<Xref> mapTautomers(Xref source) throws BioclipseException;
 
+    @Recorded
+    @PublishedMethod(
+        methodSummary="Uses an ontology approach to map something identified in the ChEBI database " +
+        		"to any other known database. It returns a Set of Xref objects.",
+        params="String identifier"
+    )
+    public List<String> mapEnantiomers(String identifier) throws BioclipseException;
+
+    @Recorded
+    @PublishedMethod(
+        methodSummary="Uses an ontology approach to map something identified in the ChEBI database " +
+        		"to any other known database. It returns a Set of Xref objects.",
+        params="Xref source"
+    )
+    public Set<Xref> mapEnantiomers(Xref source) throws BioclipseException;
 
 }
